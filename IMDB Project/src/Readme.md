@@ -1,4 +1,9 @@
 #  Sistema de Catálogo de Filmes (IMDB-like)
+## Link do Repositório de entrega do Projeto em grupo:
+- 👨‍💻 [grupo-3 - pedrobotelhosilva](https://github.com/pedrobotelhosilva/grupo-3)
+Minha parte concentrou-se especialmente na branch file
+
+
 
 ##  Descrição
 
@@ -22,66 +27,6 @@ O sistema foi desenvolvido utilizando conceitos de **Programação Orientada a O
 
 ##  Diagrama UML
 ![img.png](img.png)
-```mermaid
-classDiagram
-
-class Pessoa {
-  <<abstract>>
-  - Long id
-  - String nome
-  - LocalDate dataNascimento
-  - String nacionalidade
-  + getId()
-  + getNome()
-}
-
-class Ator {
-  - Double cache
-  + getCache()
-}
-
-class Diretor {
-  - String estilo
-  + getEstilo()
-}
-
-class Filme {
-  - Long id
-  - String nome
-  - LocalDate dataLancamento
-  - Double orcamento
-  - String descricao
-  - Diretor diretor
-  - List~Ator~ atores
-  + adicionarAtor(Ator)
-  + definirDiretor(Diretor)
-}
-
-class FilmeService {
-  - List~Filme~ filmes
-  + cadastrarFilme(Filme)
-  + buscarPorNome(String)
-  + associarAtor(Long, Ator)
-  + associarDiretor(Long, Diretor)
-}
-
-class PessoaService {
-  - List~Ator~ atores
-  - List~Diretor~ diretores
-  + cadastrarAtor(Ator)
-  + cadastrarDiretor(Diretor)
-  + buscarAtorPorId(Long)
-  + buscarDiretorPorId(Long)
-}
-
-Pessoa <|-- Ator
-Pessoa <|-- Diretor
-Filme --> Diretor
-Filme --> Ator
-FilmeService --> Filme
-PessoaService --> Ator
-PessoaService --> Diretor
-```
 
 ---
 
