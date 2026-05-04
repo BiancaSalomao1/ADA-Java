@@ -108,7 +108,6 @@ public class DemoSemFuncional {
         }
     }
 
-    // 🔹 FILTRO COM FOR
     public static List<HistoricoTreino> aplicarFiltros(
             List<HistoricoTreino> lista, Filtro filtro) {
 
@@ -144,7 +143,6 @@ public class DemoSemFuncional {
         return resultado;
     }
 
-    // 🔹 ORDENAÇÃO COM BUBBLE SORT
     public static void aplicarOrdenacao(
             List<HistoricoTreino> lista, List<Integer> criterios) {
 
@@ -184,7 +182,7 @@ public class DemoSemFuncional {
         }
     }
 
-    // 🔹 PRINT
+
     public static void imprimir(List<HistoricoTreino> lista) {
 
         if (lista.isEmpty()) {
@@ -201,4 +199,4 @@ public class DemoSemFuncional {
             );
         }
     }
-}
+}   // 🔹 PRINT
